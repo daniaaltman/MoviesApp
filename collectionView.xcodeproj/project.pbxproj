@@ -16,6 +16,11 @@
 		510FD45F27FEA5E900ACACD5 /* collectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD45E27FEA5E900ACACD5 /* collectionViewTests.swift */; };
 		510FD46927FEA5E900ACACD5 /* collectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD46827FEA5E900ACACD5 /* collectionViewUITests.swift */; };
 		510FD46B27FEA5E900ACACD5 /* collectionViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD46A27FEA5E900ACACD5 /* collectionViewUITestsLaunchTests.swift */; };
+		510FD47B27FEC1E300ACACD5 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */; };
+		510FD47C27FEC1E300ACACD5 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */; };
+		510FD47E27FECBAF00ACACD5 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD47D27FECBAF00ACACD5 /* MovieData.swift */; };
+		510FD48027FECF9100ACACD5 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD47F27FECF9100ACACD5 /* MovieRequest.swift */; };
+		510FD48227FEDB2A00ACACD5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 510FD48127FEDB2A00ACACD5 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		510FD46427FEA5E900ACACD5 /* collectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		510FD46827FEA5E900ACACD5 /* collectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewUITests.swift; sourceTree = "<group>"; };
 		510FD46A27FEA5E900ACACD5 /* collectionViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		510FD47D27FECBAF00ACACD5 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		510FD47F27FECF9100ACACD5 /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
+		510FD48127FEDB2A00ACACD5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 		510FD43B27FEA5E900ACACD5 = {
 			isa = PBXGroup;
 			children = (
+				510FD48127FEDB2A00ACACD5 /* .gitignore */,
 				510FD44627FEA5E900ACACD5 /* collectionView */,
 				510FD45D27FEA5E900ACACD5 /* collectionViewTests */,
 				510FD46727FEA5E900ACACD5 /* collectionViewUITests */,
@@ -102,10 +113,14 @@
 				510FD44727FEA5E900ACACD5 /* AppDelegate.swift */,
 				510FD44927FEA5E900ACACD5 /* SceneDelegate.swift */,
 				510FD44B27FEA5E900ACACD5 /* ViewController.swift */,
-				510FD44D27FEA5E900ACACD5 /* Main.storyboard */,
-				510FD45027FEA5E900ACACD5 /* Assets.xcassets */,
+				510FD47D27FECBAF00ACACD5 /* MovieData.swift */,
+				510FD47F27FECF9100ACACD5 /* MovieRequest.swift */,
+				510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */,
+				510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */,
 				510FD45227FEA5E900ACACD5 /* LaunchScreen.storyboard */,
+				510FD44D27FEA5E900ACACD5 /* Main.storyboard */,
 				510FD45527FEA5E900ACACD5 /* Info.plist */,
+				510FD45027FEA5E900ACACD5 /* Assets.xcassets */,
 			);
 			path = collectionView;
 			sourceTree = "<group>";
@@ -231,8 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510FD48227FEDB2A00ACACD5 /* .gitignore in Resources */,
 				510FD45427FEA5E900ACACD5 /* LaunchScreen.storyboard in Resources */,
 				510FD45127FEA5E900ACACD5 /* Assets.xcassets in Resources */,
+				510FD47C27FEC1E300ACACD5 /* MyCollectionViewCell.xib in Resources */,
 				510FD44F27FEA5E900ACACD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				510FD44C27FEA5E900ACACD5 /* ViewController.swift in Sources */,
+				510FD47B27FEC1E300ACACD5 /* MyCollectionViewCell.swift in Sources */,
+				510FD48027FECF9100ACACD5 /* MovieRequest.swift in Sources */,
 				510FD44827FEA5E900ACACD5 /* AppDelegate.swift in Sources */,
+				510FD47E27FECBAF00ACACD5 /* MovieData.swift in Sources */,
 				510FD44A27FEA5E900ACACD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,7 +474,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -482,7 +502,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
