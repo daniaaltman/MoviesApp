@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRow:CGFloat = 3
     lazy var request: MovieRequest = MovieRequest()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
 
 
-        request.httpRequest()
+        request.httpRequest(.popularity)
     }
     
 
