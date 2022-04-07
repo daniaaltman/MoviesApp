@@ -9,7 +9,7 @@ import Foundation
 
 class MovieRequest {
     
-    var currdata: Data?
+    var data: String = ""
     var movieData: [MovieData] = []
     
     enum requestType {
@@ -48,13 +48,18 @@ class MovieRequest {
                 print(error ?? "Unknown error")
                 return
             }
-            self.currdata = data
+            self.data = (string.data(using: .utf8)?.prettyPrintedJSONString ?? "no") as String
 
             print(string.data(using: .utf8)?.prettyPrintedJSONString ?? "no")
         }
         task.resume()
     }
     
+    func setupData () {
+//            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+        
+        
+    }
     
 }
 
