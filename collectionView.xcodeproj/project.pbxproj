@@ -18,8 +18,9 @@
 		510FD46B27FEA5E900ACACD5 /* collectionViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD46A27FEA5E900ACACD5 /* collectionViewUITestsLaunchTests.swift */; };
 		510FD47B27FEC1E300ACACD5 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */; };
 		510FD47C27FEC1E300ACACD5 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */; };
-		510FD48027FECF9100ACACD5 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD47F27FECF9100ACACD5 /* MovieRequest.swift */; };
+		510FD48027FECF9100ACACD5 /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD47F27FECF9100ACACD5 /* MovieApi.swift */; };
 		510FD48227FEDB2A00ACACD5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 510FD48127FEDB2A00ACACD5 /* .gitignore */; };
+		51E6E5E928001ED300342235 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6E5E828001ED300342235 /* MovieData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,9 @@
 		510FD46A27FEA5E900ACACD5 /* collectionViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
-		510FD47F27FECF9100ACACD5 /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
+		510FD47F27FECF9100ACACD5 /* MovieApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApi.swift; sourceTree = "<group>"; };
 		510FD48127FEDB2A00ACACD5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		51E6E5E828001ED300342235 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,8 @@
 				510FD44727FEA5E900ACACD5 /* AppDelegate.swift */,
 				510FD44927FEA5E900ACACD5 /* SceneDelegate.swift */,
 				510FD44B27FEA5E900ACACD5 /* ViewController.swift */,
-				510FD47F27FECF9100ACACD5 /* MovieRequest.swift */,
+				510FD47F27FECF9100ACACD5 /* MovieApi.swift */,
+				51E6E5E828001ED300342235 /* MovieData.swift */,
 				510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */,
 				510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */,
 				510FD45227FEA5E900ACACD5 /* LaunchScreen.storyboard */,
@@ -272,9 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E6E5E928001ED300342235 /* MovieData.swift in Sources */,
 				510FD44C27FEA5E900ACACD5 /* ViewController.swift in Sources */,
 				510FD47B27FEC1E300ACACD5 /* MyCollectionViewCell.swift in Sources */,
-				510FD48027FECF9100ACACD5 /* MovieRequest.swift in Sources */,
+				510FD48027FECF9100ACACD5 /* MovieApi.swift in Sources */,
 				510FD44827FEA5E900ACACD5 /* AppDelegate.swift in Sources */,
 				510FD44A27FEA5E900ACACD5 /* SceneDelegate.swift in Sources */,
 			);

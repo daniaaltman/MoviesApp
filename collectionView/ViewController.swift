@@ -12,33 +12,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRow:CGFloat = 2
-    lazy var request: MovieRequest = MovieRequest()
+    lazy var movieApi: MovieApi = MovieApi()
+    var moviesArray: [MovieData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 120, height: 120)
-        
-        
-        collectionView.collectionViewLayout = layout
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        fetchAndPlaceData()
-    
+        configure()
     }
     
-    func fetchAndPlaceData() {
+    func configure () {
         Task() {
-            do {
-                let movies = try await request.httpRequest(.popularity)
-                
-            } catch {
-                print("error occurred", error)
-            }
+            await fetchAndPlaceData()
+            collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
+            let layout = UICollectionViewFlowLayout()
+            layout.itemSize = CGSize(width: 120, height: 120)
+            
+            
+            collectionView.collectionViewLayout = layout
+            collectionView.delegate = self
+            collectionView.dataSource = self
         }
         
-        
+    }
+    
+    func fetchAndPlaceData() async {
+        do {
+            moviesArray = (try await movieApi.getMovies(.popularity)).map { MovieData($0) }
+            
+            for movie in moviesArray {
+                movie.image = try await movieApi.getMovieImage(movie.posterLink)
+            }
+        } catch {
+            print("error occurred", error)
+        }
     }
     
 
@@ -55,14 +61,16 @@ extension ViewController: UICollectionViewDelegate {
 }
 
 extension ViewController: UICollectionViewDataSource {
+
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 21
+        return moviesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
-        
-        cell.configure(with: UIImage(named: "cat")!)
+         
+        cell.configure(with: moviesArray[indexPath.item])
         return cell
     }
 }

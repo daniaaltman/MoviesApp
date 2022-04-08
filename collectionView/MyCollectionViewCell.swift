@@ -10,6 +10,7 @@ import UIKit
 class MyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView?
+    @IBOutlet weak var movieName: UILabel!
     
     static let identifier = "MyCollectionViewCell"
     
@@ -17,8 +18,9 @@ class MyCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
     }
-    public func configure (with image: UIImage) {
-        imageView?.image = image
+    public func configure (with movie: MovieData) {
+        imageView?.image = movie.image
+        movieName.text = movie.title
         
     }
     
