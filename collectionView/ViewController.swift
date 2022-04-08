@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-    let itemsPerRow:CGFloat = 3
+    let itemsPerRow:CGFloat = 2
     lazy var request: MovieRequest = MovieRequest()
 
     override func viewDidLoad() {
@@ -24,9 +24,21 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         collectionView.delegate = self
         collectionView.dataSource = self
-
-
-        request.httpRequest()
+        fetchAndPlaceData()
+    
+    }
+    
+    func fetchAndPlaceData() {
+        Task() {
+            do {
+                let movies = try await request.httpRequest(.popularity)
+                
+            } catch {
+                print("error occurred", error)
+            }
+        }
+        
+        
     }
     
 
