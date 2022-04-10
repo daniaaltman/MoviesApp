@@ -7,17 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    @IBOutlet weak var searchBar: UISearchBar!
+    let sectionInsets = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 50.0, right: 20.0)
     let itemsPerRow:CGFloat = 2
     lazy var movieApi: MovieApi = MovieApi()
     var moviesArray: [MovieData] = []
+    var originalMoviesArray: [MovieData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        searchBar.delegate = self
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (searchText.isEmpty) {
+            moviesArray = originalMoviesArray
+        } else {
+            moviesArray = originalMoviesArray.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+        }
+        collectionView.reloadData()
     }
     
     func configure () {
@@ -25,7 +37,7 @@ class ViewController: UIViewController {
             await fetchAndPlaceData()
             collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
             let layout = UICollectionViewFlowLayout()
-            layout.itemSize = CGSize(width: 120, height: 120)
+            layout.itemSize = view.sizeThatFits(CGSize(width: 20, height: 100))
             
             
             collectionView.collectionViewLayout = layout
@@ -37,18 +49,18 @@ class ViewController: UIViewController {
     
     func fetchAndPlaceData() async {
         do {
-            moviesArray = (try await movieApi.getMovies(.popularity)).map { MovieData($0) }
+            originalMoviesArray = (try await movieApi.getMovies(.popularity)).map { MovieData($0) }
             
-            for movie in moviesArray {
+            for movie in originalMoviesArray {
                 movie.image = try await movieApi.getMovieImage(movie.posterLink)
             }
+            
+            moviesArray = originalMoviesArray
+            
         } catch {
             print("error occurred", error)
         }
     }
-    
-
-  
 
 }
 
@@ -56,7 +68,12 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("you yapped me")
+
+        let movieInfoView = self.storyboard!.instantiateViewController(withIdentifier: "MovieInfo") as! MovieInfo
+        movieInfoView.modalPresentationStyle = .fullScreen
+        movieInfoView.setMovie(movieData: moviesArray[indexPath.item])
+        self.navigationController!.pushViewController(movieInfoView, animated: true)
+      
     }
 }
 

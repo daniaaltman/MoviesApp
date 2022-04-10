@@ -20,6 +20,7 @@
 		510FD47C27FEC1E300ACACD5 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */; };
 		510FD48027FECF9100ACACD5 /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510FD47F27FECF9100ACACD5 /* MovieApi.swift */; };
 		510FD48227FEDB2A00ACACD5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 510FD48127FEDB2A00ACACD5 /* .gitignore */; };
+		516845A32801B95500BBCF5F /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516845A22801B95500BBCF5F /* MovieInfo.swift */; };
 		51E6E5E928001ED300342235 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6E5E828001ED300342235 /* MovieData.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		510FD47F27FECF9100ACACD5 /* MovieApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApi.swift; sourceTree = "<group>"; };
 		510FD48127FEDB2A00ACACD5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		516845A22801B95500BBCF5F /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		51E6E5E828001ED300342235 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,15 +112,11 @@
 		510FD44627FEA5E900ACACD5 /* collectionView */ = {
 			isa = PBXGroup;
 			children = (
+				51E6E5ED2801B5C700342235 /* viewControllers */,
+				51E6E5EA2801A31200342235 /* movieData */,
 				510FD44727FEA5E900ACACD5 /* AppDelegate.swift */,
 				510FD44927FEA5E900ACACD5 /* SceneDelegate.swift */,
-				510FD44B27FEA5E900ACACD5 /* ViewController.swift */,
-				510FD47F27FECF9100ACACD5 /* MovieApi.swift */,
-				51E6E5E828001ED300342235 /* MovieData.swift */,
-				510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */,
-				510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */,
 				510FD45227FEA5E900ACACD5 /* LaunchScreen.storyboard */,
-				510FD44D27FEA5E900ACACD5 /* Main.storyboard */,
 				510FD45527FEA5E900ACACD5 /* Info.plist */,
 				510FD45027FEA5E900ACACD5 /* Assets.xcassets */,
 			);
@@ -140,6 +138,27 @@
 				510FD46A27FEA5E900ACACD5 /* collectionViewUITestsLaunchTests.swift */,
 			);
 			path = collectionViewUITests;
+			sourceTree = "<group>";
+		};
+		51E6E5EA2801A31200342235 /* movieData */ = {
+			isa = PBXGroup;
+			children = (
+				51E6E5E828001ED300342235 /* MovieData.swift */,
+				510FD47F27FECF9100ACACD5 /* MovieApi.swift */,
+			);
+			path = movieData;
+			sourceTree = "<group>";
+		};
+		51E6E5ED2801B5C700342235 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				510FD44B27FEA5E900ACACD5 /* ViewController.swift */,
+				516845A22801B95500BBCF5F /* MovieInfo.swift */,
+				510FD47927FEC1E300ACACD5 /* MyCollectionViewCell.swift */,
+				510FD44D27FEA5E900ACACD5 /* Main.storyboard */,
+				510FD47A27FEC1E300ACACD5 /* MyCollectionViewCell.xib */,
+			);
+			path = viewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516845A32801B95500BBCF5F /* MovieInfo.swift in Sources */,
 				51E6E5E928001ED300342235 /* MovieData.swift in Sources */,
 				510FD44C27FEA5E900ACACD5 /* ViewController.swift in Sources */,
 				510FD47B27FEC1E300ACACD5 /* MyCollectionViewCell.swift in Sources */,
