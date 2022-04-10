@@ -61,6 +61,10 @@ class ViewController: UIViewController, UISearchBarDelegate, UISearchDisplayDele
             print("error occurred", error)
         }
     }
+    
+    func configuerAccessibility () {
+        
+    }
 
 }
 

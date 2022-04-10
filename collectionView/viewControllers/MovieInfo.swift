@@ -34,18 +34,11 @@ class MovieInfo: UIViewController {
         rating.text = formatter.string(from: rate)
     }
     
-//    class func instanceFromNib() -> MovieInfo {
-//        return UINib(nibName: "nib file name", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! MovieInfo
-//    }
     
     func setMovie (movieData: MovieData) {
-       // self.navigationItem.title = movieData.title
-        //nav.title = movieData.title
         self.movieData = movieData
-        //        rating.text = String(
-     //   reealseDate.text = movieData.releaseDate
-    //    movieDescription.text = movieData.overview
         
     }
+ 
     
 }

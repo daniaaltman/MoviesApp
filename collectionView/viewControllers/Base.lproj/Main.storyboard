@@ -16,25 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etc-Zz-21c">
-                                <rect key="frame" x="0.0" y="82" width="414" height="68"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qRS-ku-IWE">
-                                        <rect key="frame" x="0.0" y="9" width="414" height="51"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="qRS-ku-IWE" firstAttribute="leading" secondItem="Etc-Zz-21c" secondAttribute="leading" id="1Dr-6F-gco"/>
-                                    <constraint firstItem="qRS-ku-IWE" firstAttribute="top" secondItem="Etc-Zz-21c" secondAttribute="top" constant="9" id="DsX-oL-H8K"/>
-                                    <constraint firstAttribute="bottom" secondItem="qRS-ku-IWE" secondAttribute="bottom" constant="8" id="Ri0-EB-Vjb"/>
-                                    <constraint firstItem="qRS-ku-IWE" firstAttribute="centerX" secondItem="Etc-Zz-21c" secondAttribute="centerX" id="f7f-Fj-DMl"/>
-                                </constraints>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tud-hT-nk7">
-                                <rect key="frame" x="0.0" y="158" width="414" height="704"/>
+                                <rect key="frame" x="0.0" y="192" width="414" height="704"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="704" id="tP4-lM-98O"/>
@@ -56,19 +39,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRS-ku-IWE">
+                                <rect key="frame" x="0.0" y="141" width="414" height="51"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tud-hT-nk7" firstAttribute="top" secondItem="Etc-Zz-21c" secondAttribute="bottom" constant="8" id="3Zf-7p-GyX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tud-hT-nk7" secondAttribute="trailing" id="4VT-Ig-Uu6"/>
-                            <constraint firstItem="Etc-Zz-21c" firstAttribute="trailing" secondItem="tud-hT-nk7" secondAttribute="trailing" id="7m3-mJ-bfD"/>
-                            <constraint firstItem="tud-hT-nk7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GT3-Gv-vQh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tud-hT-nk7" secondAttribute="bottom" id="OLh-SC-9iI"/>
-                            <constraint firstItem="Etc-Zz-21c" firstAttribute="leading" secondItem="tud-hT-nk7" secondAttribute="leading" id="PcG-ln-5DL"/>
+                            <constraint firstItem="tud-hT-nk7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="2je-d1-15s"/>
+                            <constraint firstItem="qRS-ku-IWE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="3WY-jV-yYe"/>
+                            <constraint firstItem="qRS-ku-IWE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="141" id="ANV-0D-sOU"/>
+                            <constraint firstItem="qRS-ku-IWE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XxJ-IR-XRa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tud-hT-nk7" secondAttribute="trailing" id="bP3-Ps-Hv9"/>
+                            <constraint firstItem="qRS-ku-IWE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.02" constant="-862.92000000000007" id="gfB-zb-kRY"/>
+                            <constraint firstItem="qRS-ku-IWE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lzI-1s-BXw"/>
+                            <constraint firstItem="tud-hT-nk7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="nsS-9m-HiX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MovieApp 🍿" id="3N2-sg-jAo"/>
+                    <navigationItem key="navigationItem" title="MovieApp 🍿" id="I6F-HZ-Zec"/>
                     <connections>
                         <outlet property="collectionView" destination="tud-hT-nk7" id="cEC-ar-fCc"/>
                         <outlet property="searchBar" destination="qRS-ku-IWE" id="qSM-vX-Nw6"/>
@@ -117,7 +111,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="realese date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-C6-0aL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="release date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-C6-0aL">
                                 <rect key="frame" x="178" y="257" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
