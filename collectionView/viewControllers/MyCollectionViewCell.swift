@@ -10,15 +10,19 @@ import UIKit
 class MyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView?
-    
+    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var movieName: UILabel!
+    var size: CGFloat?
     static let identifier = "MyCollectionViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
     }
-    public func configure (with image: UIImage) {
-        imageView?.image = image
+    public func configure (with movie: MovieData) {
+        imageView?.image = movie.image
+        movieName.text = movie.title
         
     }
     
