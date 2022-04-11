@@ -11,6 +11,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView?
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var movieName: UILabel!
     var size: CGFloat?
     static let identifier = "MyCollectionViewCell"
@@ -23,6 +24,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     public func configure (with movie: MovieData) {
         imageView?.image = movie.image
         movieName.text = movie.title
+        yearLabel.text = movie.releaseDate
         
     }
     

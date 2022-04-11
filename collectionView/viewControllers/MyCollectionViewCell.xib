@@ -62,6 +62,7 @@
                 <outlet property="imageView" destination="VLl-ow-OIr" id="Mze-tV-VK6"/>
                 <outlet property="movieName" destination="PiG-Kq-eIM" id="VkQ-zH-0Ie"/>
                 <outlet property="view" destination="rdZ-SP-ZM4" id="mFe-fc-WcI"/>
+                <outlet property="yearLabel" destination="zvj-Gy-xHU" id="tUv-iV-gmH"/>
             </connections>
             <point key="canvasLocation" x="-121.0144927536232" y="-84.375"/>
         </collectionViewCell>
